@@ -52,6 +52,7 @@ sky130hvl_ldo_verilog:
 
 sky130hvl_ldo:
 	python3 ./tools/ldo-gen.py --output ./work --platform sky130hvl --mode macro $(UserSpec)
+	@python3 tools/parse_rpt.py
 	@@echo "=================================================================================="
 	@@echo "Thank you for using OpenFASOC"
 	@@echo "For more info, please read the latest documentation on openfasoc.readthedocs.io"
@@ -60,6 +61,7 @@ sky130hvl_ldo:
 
 sky130hvl_ldo_full:
 	python3 ./tools/ldo-gen.py --output ./work --platform sky130hvl --mode full $(UserSpec)
+	@python3 tools/parse_rpt.py
 	@@echo "=================================================================================="
 	@@echo "Thank you for using OpenFASOC"
 	@@echo "For more info, please read the latest documentation on openfasoc.readthedocs.io"
